@@ -11,10 +11,10 @@ function Calc(){
     var div=function(x,y){
         return x/y;
     }
-    return [0,add,sub,mul,div];
+    return [add,sub,mul,div];
 }
 function calculator(x,y,n){
-    return Calc()[n](x,y);
+    return Calc()[n-1](x,y);
 }
 var a=parseInt(prompt("Enter first number: "));
 var b=parseInt(prompt("Enter second number: "));
