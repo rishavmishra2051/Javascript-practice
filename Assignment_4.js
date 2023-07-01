@@ -58,7 +58,7 @@ arr.sort((a,b)=>a-b)[arr.length-2];
 
 /*Write a function to rotate an array by a given number of steps to the right.
 ex:- arr = [1,2,3,4,5];
-		step = 2;
+ step = 2;
  output = [5,4,1,2,3]*/
 //code
 
@@ -67,3 +67,33 @@ ex:- arr = [1,2,3,4,5];
 ex:- arr1 = [2,4,1,7,4,2] , arr2 = [5,1,4,7,3,1];
 output = [1,4,7]*/
 //code
+var arr1 = [2,4,1,7,4,2];
+var arr2 = [5,1,4,7,3,1];
+var result1=[];
+var result2=[];
+arr1.sort((a,b)=>a-b);
+arr1.forEach((n,i)=>{
+    if(arr1[i]!=arr1[i+1]){
+        result1.push(arr1[i]);
+    }
+});
+arr2.sort((a,b)=>a-b);
+arr2.forEach((n,i)=>{
+    if(arr2[i]!=arr2[i+1]){
+        result2.push(arr2[i]);
+    }
+});
+result1.filter(e=>result2.includes(e));
+
+/*Write a function to remove duplicate elements from an array while preserving the original order.
+	ex:- arr = [1,2,5,2,5,1,6,7,7]
+	output:- [1,2,5,6,7]*/
+//code
+var result=[];
+arr.sort((a,b)=>a-b);
+arr.forEach((n,i)=>{
+    if(arr[i]!=arr[i+1]){
+        result.push(arr[i]);
+    }
+});
+result;
