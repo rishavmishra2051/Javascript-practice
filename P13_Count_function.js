@@ -1,12 +1,14 @@
 /*write a function counter which increases +1 whenever it called without using global variable*/
+//Self invoke function or Immidiate invoke function
 //code
-function init(){
+var fn=(function (){
     var counter=0;
     function count(){
         counter++;
         return counter;
     }
     return count;
-}
-var fn=init();
+})();
+fn();
+
 fn();
